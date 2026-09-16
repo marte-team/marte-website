@@ -1,0 +1,25 @@
+marte-website/
+│
+├── public/
+│   ├── logo/
+│   └── images/
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Problems.jsx
+│   │   ├── WhyUs.jsx
+│   │   ├── Services.jsx
+│   │   ├── Expertise.jsx
+│   │   ├── About.jsx
+│   │   ├── Clients.jsx
+│   │   ├── CTA.jsx
+│   │   └── Footer.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── package.json
+└── README.md
