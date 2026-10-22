@@ -18,12 +18,10 @@ function Services({ onOpenConsultation }) {
   return (
     <section className="section services-section" id="services">
       <div className="section-container">
-        <div className="section-heading split-heading">
-          <div>
-            <span className="eyebrow">04 / SERVICES</span>
-            <h2>Services Built Around Growth</h2>
-          </div>
-          <p className="section-intro">
+        <div className="section-heading full-width-heading">
+          <span className="eyebrow">SERVICES</span>
+          <h2>Services Built Around Growth</h2>
+          <p className="section-subheading">
             From technical implementation to lifecycle campaigns and inbox deliverability, we bring your systems and customer communications together.
           </p>
         </div>

@@ -13,12 +13,10 @@ function Clients() {
   return (
     <section className="section clients-section" id="clients">
       <div className="section-container">
-        <div className="section-heading split-heading">
-          <div>
-            <span className="eyebrow">06 / CLIENTS</span>
-            <h2>Real Systems. Real Businesses.</h2>
-          </div>
-          <p>
+        <div className="section-heading full-width-heading">
+          <span className="eyebrow">OUR CLIENTS</span>
+          <h2>Real Systems. Real Businesses.</h2>
+          <p className="section-subtitle">
             A look at how we design, implement, and manage CRM infrastructure for organizations that rely on dependable customer operations.
           </p>
         </div>

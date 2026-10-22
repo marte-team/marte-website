@@ -10,7 +10,7 @@ function AboutPage({ onOpenConsultation }) {
         <div className="subpage-hero-grid" aria-hidden="true"></div>
         <div className="section-container">
           <div className="subpage-hero-content">
-            <span className="eyebrow">07 / ABOUT US</span>
+            <span className="eyebrow">ABOUT US</span>
             <h1>Why We Started MARTÉ</h1>
             <p className="subpage-lead-copy">
               A story of turning underused marketing technology into scalable, predictable revenue engines.

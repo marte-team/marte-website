@@ -7,7 +7,7 @@ function LeadCTA() {
       <div className="section-container">
         <div className="lead-cta-layout">
           <div className="lead-cta-copy">
-            <span className="eyebrow">09 / START A CONVERSATION</span>
+            <span className="eyebrow">START A CONVERSATION</span>
             <h2>
               Know why your leads <span>are not converting?</span>
             </h2>

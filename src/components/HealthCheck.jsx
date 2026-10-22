@@ -22,7 +22,7 @@ function HealthCheck({ onOpenConsultation }) {
     <section className="section health-section" id="health-check">
       <div className="section-container health-layout">
         <div className="health-intro">
-          <span className="eyebrow">08 / QUICK DIAGNOSTIC</span>
+          <span className="eyebrow">QUICK DIAGNOSTIC</span>
           <h2>Is your CRM working as hard as it should?</h2>
           <p>
             Use this 30-second checklist to spot foundational gaps in your current setup. It is a starting benchmark for your operational health.

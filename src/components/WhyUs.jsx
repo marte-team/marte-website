@@ -9,11 +9,11 @@ function WhyUs() {
     <section className="section why-section" id="why-us">
       <div className="section-container">
         <div className="dark-heading">
-          <span className="eyebrow">03 / WHY MARTÉ</span>
+          <span className="eyebrow">WHY MARTÉ</span>
           <h2>
             More than another <span>CRM partner.</span>
           </h2>
-          <p>
+          <p className="section-subheading">
             Strategy, technology, automation, and email deliverability, brought together under one accountable team.
           </p>
         </div>
@@ -43,7 +43,7 @@ function WhyUs() {
               </div>
               <div className="trust-point">
                 <CheckCircle2 size={16} />
-                <span>Practitioner-Led Execution, No Juniors</span>
+                <span>Dedicated CRM Specialists</span>
               </div>
               <div className="trust-point">
                 <CheckCircle2 size={16} />

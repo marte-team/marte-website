@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import { Mail, Linkedin, ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, Clock } from "lucide-react";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/marte-business/";
 const CONTACT_EMAIL = "sales.marte.com@gmail.com";
@@ -28,7 +28,7 @@ function ContactPage() {
         <div className="subpage-hero-grid" aria-hidden="true"></div>
         <div className="section-container">
           <div className="subpage-hero-content">
-            <span className="eyebrow">08 / CONTACT &amp; DIAGNOSTIC</span>
+            <span className="eyebrow">CONTACT &amp; DIAGNOSTIC</span>
             <h1>Let's Find the Gap</h1>
             <p className="subpage-lead-copy">
               Audit your CRM with our interactive self-check below, or send us your details directly to schedule a confidential strategy session.
@@ -37,11 +37,11 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Main Contact Page Layout: Self-Check + Embedded Brevo Form */}
+      {/* Main Contact Section: Balanced 2-Column (Diagnostic + Form) */}
       <section className="section contact-page-section">
         <div className="section-container">
           <div className="contact-page-layout">
-            {/* Left: Quick Diagnostic Self-Check */}
+            {/* Column 1: Quick Diagnostic Self-Check */}
             <div className="contact-diagnostic-column">
               <div className="contact-diagnostic-card">
                 <div className="diagnostic-header">
@@ -81,53 +81,15 @@ function ContactPage() {
                   <span>Use these points in your consultation call for a targeted technical review.</span>
                 </div>
               </div>
-
-              {/* Direct Reach Channels */}
-              <div className="contact-direct-box">
-                <span className="box-eyebrow">DIRECT CONTACT</span>
-                <h4>Prefer email or LinkedIn?</h4>
-                <div className="direct-links-list">
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    className="direct-link-item"
-                    aria-label="Email MARTÉ"
-                  >
-                    <div className="direct-icon-bubble">
-                      <Mail size={16} />
-                    </div>
-                    <div>
-                      <small>Email Us</small>
-                      <span>{CONTACT_EMAIL}</span>
-                    </div>
-                  </a>
-
-                  <a
-                    href={LINKEDIN_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="direct-link-item"
-                    aria-label="MARTÉ on LinkedIn"
-                  >
-                    <div className="direct-icon-bubble">
-                      <Linkedin size={16} />
-                    </div>
-                    <div>
-                      <small>LinkedIn</small>
-                      <span>Follow MARTÉ</span>
-                    </div>
-                    <ArrowUpRight size={14} className="direct-arrow" />
-                  </a>
-                </div>
-              </div>
             </div>
 
-            {/* Right: The Embedded Brevo Form */}
+            {/* Column 2: Embedded Brevo Form */}
             <div className="contact-form-column" id="contact-form">
               <div className="contact-form-card">
                 <div className="form-card-top">
                   <span className="form-badge">FREE STRATEGY INQUIRY</span>
                   <h3>Tell us where you need support</h3>
-                  <p>Share your current CRM platforms and growth goals. A MARTÉ practitioner will get back to you promptly.</p>
+                  <p>Share your current CRM platforms and growth goals. A MARTÉ specialist will review your setup.</p>
                 </div>
 
                 <div className="embedded-iframe-container">
@@ -154,7 +116,60 @@ function ContactPage() {
 
                 <div className="form-card-guarantee">
                   <Sparkles size={15} />
-                  <span>No pitch decks. No sales pressure. Honest advice from CRM practitioners.</span>
+                  <span>Confidential review. Direct conversation with CRM specialists.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Full-Width Direct Reach Banner Across Both Columns (Zero Empty Right Space!) */}
+          <div className="contact-direct-full-banner">
+            <div className="direct-banner-header">
+              <span className="box-eyebrow">DIRECT CONTACT</span>
+              <h3>Prefer email or LinkedIn?</h3>
+              <p>Reach out directly to discuss your CRM architecture or ongoing marketing operations.</p>
+            </div>
+
+            <div className="direct-banner-channels">
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="direct-channel-card"
+                aria-label="Email MARTÉ"
+              >
+                <div className="direct-channel-bubble">
+                  <Mail size={18} />
+                </div>
+                <div className="direct-channel-text">
+                  <small>Email Us</small>
+                  <span>{CONTACT_EMAIL}</span>
+                </div>
+                <ArrowUpRight size={16} className="channel-arrow" />
+              </a>
+
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="direct-channel-card"
+                aria-label="MARTÉ on LinkedIn"
+              >
+                <div className="direct-channel-bubble linkedin-bubble">
+                  <Linkedin size={18} />
+                </div>
+                <div className="direct-channel-text">
+                  <small>Company Page</small>
+                  <span>Follow MARTÉ on LinkedIn</span>
+                </div>
+                <ArrowUpRight size={16} className="channel-arrow" />
+              </a>
+
+              <div className="direct-channel-card direct-guarantee-card">
+                <div className="direct-channel-bubble guarantee-bubble">
+                  <Clock size={18} />
+                </div>
+                <div className="direct-channel-text">
+                  <small>Fast Response</small>
+                  <span>Reply within 24 business hours</span>
                 </div>
               </div>
             </div>

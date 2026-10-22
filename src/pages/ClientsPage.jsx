@@ -18,7 +18,7 @@ function ClientsPage({ onOpenConsultation }) {
         <div className="subpage-hero-grid" aria-hidden="true"></div>
         <div className="section-container">
           <div className="subpage-hero-content">
-            <span className="eyebrow">06 / OUR CLIENTS</span>
+            <span className="eyebrow">OUR CLIENTS</span>
             <h1>Real Systems. Real Businesses.</h1>
             <p className="subpage-lead-copy">
               A detailed look at how we design, implement, and manage CRM infrastructure for organizations that rely on dependable customer operations.
@@ -96,7 +96,7 @@ function ClientsPage({ onOpenConsultation }) {
             <div className="trust-column">
               <Sparkles size={20} className="trust-icon" />
               <h4>Practitioner Execution</h4>
-              <p>You work directly with senior CRM strategists and automation engineers, not junior account managers or offshore contractors.</p>
+              <p>You work directly with dedicated CRM strategists and automation specialists focused on your systems.</p>
             </div>
           </div>
         </div>

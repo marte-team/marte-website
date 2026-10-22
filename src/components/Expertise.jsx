@@ -7,12 +7,10 @@ function Expertise() {
   return (
     <section className="section expertise-section" id="expertise">
       <div className="section-container">
-        <div className="expertise-header">
-          <div>
-            <span className="eyebrow">05 / EXPERTISE</span>
-            <h2>Built Around the Systems Behind Growth</h2>
-          </div>
-          <p>
+        <div className="section-heading full-width-heading">
+          <span className="eyebrow">EXPERTISE</span>
+          <h2>Built Around the Systems Behind Growth</h2>
+          <p className="section-subheading">
             From enterprise CRM architecture to final deliverability protocols, our domain expertise covers the full technical stack of modern revenue operations.
           </p>
         </div>

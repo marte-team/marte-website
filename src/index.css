@@ -94,10 +94,18 @@ img {
   margin-bottom: 18px;
   color: var(--red);
   font-family: var(--font-pointer);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.section-heading,
+.dark-heading,
+.full-width-heading,
+.about-header-wrap {
+  width: 100%;
+  margin-bottom: 55px;
 }
 
 .section-heading h2,
@@ -107,33 +115,30 @@ img {
 .about-header-wrap h2,
 .lead-cta-copy h2,
 .health-intro h2 {
-  max-width: 820px;
-  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 16px;
   font-family: var(--font-main);
-  font-size: clamp(40px, 4.8vw, 72px);
-  line-height: 1.02;
-  letter-spacing: -0.05em;
+  font-size: clamp(38px, 4.8vw, 70px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
   font-weight: 700;
   text-transform: none;
 }
 
-.section-heading {
-  margin-bottom: 60px;
-}
-
-.split-heading {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 80px;
-  align-items: end;
-}
-
-.split-heading p,
-.section-intro {
-  margin: 0;
+.section-subheading,
+.section-intro,
+.dark-heading p {
+  width: 100%;
+  max-width: 780px;
+  margin: 16px 0 0;
   color: var(--grey-600);
-  font-size: 16px;
+  font-size: 16.5px;
   line-height: 1.8;
+}
+
+.dark-heading p {
+  color: #adada9;
 }
 
 /* =========================
@@ -358,9 +363,9 @@ img {
   margin-bottom: 24px;
   color: #c5c5c0;
   font-family: var(--font-pointer);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -1412,42 +1417,50 @@ img {
 }
 
 .client-main-info {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  min-height: 135px;
+  display: flex;
+  flex-direction: column;
 }
 
 .client-timeline-note {
   display: block;
   color: var(--red);
-  font-family: var(--font-mono);
-  font-size: 10px;
+  font-family: var(--font-pointer);
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .client-main-info h3 {
-  margin: 0 0 14px;
-  font-size: 32px;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #ffffff !important;
+  font-weight: 700;
 }
 
 .client-summary-lead {
   margin: 0;
-  color: #a4a49f;
-  font-size: 14.5px;
-  line-height: 1.7;
+  color: #b0b0ab;
+  font-size: 14px;
+  line-height: 1.65;
+  min-height: 46px;
 }
 
 .client-deliverable-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 12px;
   padding: 16px 0;
-  border-top: 1px solid #1f1f1f;
-  border-bottom: 1px solid #1f1f1f;
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
   margin-bottom: 20px;
+  min-height: 52px;
+  align-items: center;
 }
 
 .deliverable-tag {
@@ -2576,45 +2589,74 @@ img {
   flex-shrink: 0;
 }
 
-.contact-direct-box {
-  margin-top: 24px;
-  padding: 28px;
+.contact-direct-full-banner {
+  margin-top: 48px;
+  padding: 36px 40px;
   background: var(--white);
   border: 1px solid var(--grey-200);
   border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  width: 100%;
 }
 
-.contact-direct-box h4 {
-  margin: 6px 0 16px;
-  font-size: 17px;
+.direct-banner-header {
+  margin-bottom: 24px;
 }
 
-.direct-links-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.direct-banner-header .box-eyebrow {
+  display: block;
+  font-family: var(--font-pointer);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
-.direct-link-item {
+.direct-banner-header h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+
+.direct-banner-header p {
+  color: var(--grey-600);
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.direct-banner-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.direct-channel-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 12px 16px;
-  border: 1px solid var(--grey-100);
+  padding: 16px 20px;
+  border: 1px solid var(--grey-200);
   background: var(--off-white);
   border-radius: var(--radius);
   transition: all var(--transition);
+  text-decoration: none;
+  color: inherit;
 }
 
-.direct-link-item:hover {
+.direct-channel-card:not(.direct-guarantee-card):hover {
   border-color: var(--red);
   background: var(--white);
-  transform: translateX(3px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 }
 
-.direct-icon-bubble {
-  width: 36px;
-  height: 36px;
+.direct-channel-bubble {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: var(--black);
   color: var(--white);
@@ -2624,29 +2666,74 @@ img {
   transition: all var(--transition);
 }
 
-.direct-link-item:hover .direct-icon-bubble {
+.direct-channel-card:not(.direct-guarantee-card):hover .direct-channel-bubble {
   background: var(--red);
 }
 
-.direct-link-item small {
-  display: block;
+.direct-channel-bubble.linkedin-bubble {
+  background: #0077b5;
+  color: #ffffff;
+}
+
+.direct-channel-card:not(.direct-guarantee-card):hover .direct-channel-bubble.linkedin-bubble {
+  background: #005582;
+}
+
+.direct-channel-bubble.guarantee-bubble {
+  background: #ebebe8;
+  color: #2b2b29;
+}
+
+.direct-channel-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.direct-channel-text small {
   font-family: var(--font-pointer);
-  font-size: 9.5px;
+  font-size: 11px;
   text-transform: uppercase;
   color: #787874;
   letter-spacing: 0.1em;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
+  font-weight: 600;
 }
 
-.direct-link-item span {
+.direct-channel-text span {
   font-size: 13.5px;
   font-weight: 600;
   color: #1f1f1e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.direct-arrow {
+.channel-arrow {
   margin-left: auto;
   color: #8c8c88;
+  flex-shrink: 0;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.direct-channel-card:hover .channel-arrow {
+  color: var(--red);
+  transform: translate(2px, -2px);
+}
+
+.direct-guarantee-card {
+  background: #fafaf9;
+  border-style: dashed;
+  cursor: default;
+}
+
+@media (max-width: 900px) {
+  .direct-banner-channels {
+    grid-template-columns: 1fr;
+  }
+  .contact-direct-full-banner {
+    padding: 24px 20px;
+  }
 }
 
 .contact-form-card {

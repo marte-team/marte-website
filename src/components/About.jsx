@@ -5,7 +5,7 @@ function About() {
     <section className="section about-section" id="about">
       <div className="section-container">
         <div className="about-header-wrap">
-          <span className="eyebrow">07 / ABOUT US</span>
+          <span className="eyebrow">ABOUT US</span>
           <h2>{about.title}</h2>
         </div>
 

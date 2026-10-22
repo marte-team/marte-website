@@ -31,12 +31,10 @@ function Lifecycle() {
   return (
     <section className="section lifecycle-section" id="approach">
       <div className="section-container">
-        <div className="section-heading split-heading lifecycle-heading">
-          <div>
-            <span className="eyebrow">02 / THE MARTÉ APPROACH</span>
-            <h2>One Partner. Every Stage.</h2>
-          </div>
-          <p>
+        <div className="section-heading full-width-heading lifecycle-heading">
+          <span className="eyebrow">THE MARTÉ APPROACH</span>
+          <h2>One Partner. Every Stage.</h2>
+          <p className="section-subheading">
             From initial platform architecture to ongoing campaign optimization, your CRM works as one connected growth engine, not a patchwork of disconnected vendors.
           </p>
         </div>

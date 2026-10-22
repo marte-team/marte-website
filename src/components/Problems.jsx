@@ -10,12 +10,10 @@ function Problems() {
   return (
     <section className="section problems-section" id="problems">
       <div className="section-container">
-        <div className="section-heading split-heading">
-          <div>
-            <span className="eyebrow">01 / THE CORE CHALLENGE</span>
-            <h2>Where CRM Systems Fall Short</h2>
-          </div>
-          <p>
+        <div className="section-heading full-width-heading">
+          <span className="eyebrow">THE CORE CHALLENGE</span>
+          <h2>Where CRM Systems Fall Short</h2>
+          <p className="section-subheading">
             Your CRM can do far more than store contacts. We identify the operational gaps between what your platform is capable of and how it performs in practice.
           </p>
         </div>
