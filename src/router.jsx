@@ -18,13 +18,26 @@ export function Router({ children }) {
   const [path, setPath] = useState(getInitialPath);
 
   useEffect(() => {
+    // Reset scroll to top on mount
+    window.scrollTo(0, 0);
+
     const handlePopState = () => {
       const p = window.location.pathname.toLowerCase().replace(/\/$/, "");
       setPath(p === "" ? "/" : p);
+      window.scrollTo(0, 0);
+    };
+
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
     };
 
     window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
   }, []);
 
   const navigate = (to) => {
@@ -32,9 +45,9 @@ export function Router({ children }) {
     if (cleanTo !== path) {
       window.history.pushState({}, "", cleanTo);
       setPath(cleanTo);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo(0, 0);
     } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo(0, 0);
     }
   };
 
