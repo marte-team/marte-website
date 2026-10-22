@@ -11,6 +11,20 @@ export function useRouter() {
 
 export function Router({ children }) {
   const getInitialPath = () => {
+    try {
+      const navEntries = window.performance?.getEntriesByType?.("navigation") || [];
+      const isReload =
+        (navEntries.length > 0 && navEntries[0].type === "reload") ||
+        (window.performance?.navigation?.type === 1) ||
+        sessionStorage.getItem("marte_reload_to_home") === "true";
+
+      if (isReload && window.location.pathname !== "/" && window.location.pathname !== "") {
+        sessionStorage.removeItem("marte_reload_to_home");
+        window.history.replaceState(null, "", "/");
+        return "/";
+      }
+    } catch (e) {}
+
     const p = window.location.pathname.toLowerCase().replace(/\/$/, "");
     return p === "" ? "/" : p;
   };
@@ -28,7 +42,9 @@ export function Router({ children }) {
     };
 
     const handleBeforeUnload = () => {
-      window.scrollTo(0, 0);
+      try {
+        sessionStorage.setItem("marte_reload_to_home", "true");
+      } catch (e) {}
     };
 
     window.addEventListener("popstate", handlePopState);

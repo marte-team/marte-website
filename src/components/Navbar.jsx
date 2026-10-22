@@ -30,11 +30,17 @@ function Navbar({ onOpenConsultation }) {
       navigate("/");
       setTimeout(() => {
         const el = document.getElementById(hash);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }, 150);
     } else {
       const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -46,6 +52,15 @@ function Navbar({ onOpenConsultation }) {
         </Link>
 
         <nav className={`desktop-nav ${mobileOpen ? "mobile-active" : ""}`} aria-label="Main navigation">
+          {/* Quick Return to Home Tab */}
+          <Link
+            to="/"
+            className={`nav-link ${path === "/" ? "active" : ""}`}
+            onClick={closeMenu}
+          >
+            Home
+          </Link>
+
           <div
             className="nav-dropdown"
             onMouseEnter={() => setCompanyOpen(true)}

@@ -30,6 +30,32 @@
         history.scrollRestoration = 'manual';
       }
       window.scrollTo(0, 0);
+
+      // If user refreshed while on any subpage, immediately return to Home page
+      try {
+        var isReload = false;
+        if (window.performance) {
+          var navEntries = performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+          if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+            isReload = true;
+          } else if (performance.navigation && performance.navigation.type === 1) {
+            isReload = true;
+          }
+        }
+        if (sessionStorage.getItem('marte_reload_to_home') === 'true') {
+          isReload = true;
+          sessionStorage.removeItem('marte_reload_to_home');
+        }
+        if (isReload && window.location.pathname !== '/' && window.location.pathname !== '') {
+          window.history.replaceState(null, '', '/');
+        }
+      } catch (e) {}
+
+      window.addEventListener('beforeunload', function () {
+        try {
+          sessionStorage.setItem('marte_reload_to_home', 'true');
+        } catch (e) {}
+      });
     </script>
   </head>
 
