@@ -1,4 +1,5 @@
 import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Link } from "../router";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/marte-business/";
 const CONTACT_EMAIL = "sales.marte.com@gmail.com";
@@ -9,9 +10,9 @@ function Footer({ onOpenConsultation }) {
       <div className="section-container">
         <div className="footer-main">
           <div className="footer-brand">
-            <a className="footer-logo-wrap" href="#top" aria-label="MARTÉ home">
+            <Link className="footer-logo-wrap" to="/" aria-label="MARTÉ home">
               <img src="/logo/marte-logo-transparent.png" alt="MARTÉ" />
-            </a>
+            </Link>
             <p>
               CRM and growth services, brought together under one accountable partner. Empowering businesses across EMEA and LATAM.
             </p>
@@ -70,13 +71,13 @@ function Footer({ onOpenConsultation }) {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} MARTÉ. All rights reserved.</span>
           <div className="footer-bottom-links">
-            <a href="#services">Services</a>
+            <Link to="/">Home</Link>
             <span>•</span>
-            <a href="#expertise">Expertise</a>
+            <Link to="/aboutus">About Us</Link>
             <span>•</span>
-            <a href="#clients">Clients</a>
+            <Link to="/clients">Our Clients</Link>
             <span>•</span>
-            <a href="#lead-form">Contact</a>
+            <Link to="/contact">Contact</Link>
           </div>
           <span>CRM • GROWTH SERVICES</span>
         </div>

@@ -1,20 +1,17 @@
 import { useState } from "react";
+import { Router, useRouter } from "./router";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Problems from "./components/Problems";
-import Lifecycle from "./components/Lifecycle";
-import WhyUs from "./components/WhyUs";
-import Services from "./components/Services";
-import Expertise from "./components/Expertise";
-import Clients from "./components/Clients";
-import About from "./components/About";
-import HealthCheck from "./components/HealthCheck";
-import LeadCTA from "./components/LeadCTA";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/ConsultationModal";
 
-function App() {
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ClientsPage from "./pages/ClientsPage";
+import ContactPage from "./pages/ContactPage";
+
+function AppContent() {
   const [consultationOpen, setConsultationOpen] = useState(false);
+  const { path } = useRouter();
 
   const handleOpenConsultation = () => {
     setConsultationOpen(true);
@@ -24,20 +21,26 @@ function App() {
     setConsultationOpen(false);
   };
 
+  const renderCurrentPage = () => {
+    switch (path) {
+      case "/aboutus":
+      case "/about":
+        return <AboutPage onOpenConsultation={handleOpenConsultation} />;
+      case "/clients":
+        return <ClientsPage onOpenConsultation={handleOpenConsultation} />;
+      case "/contact":
+      case "/contactus":
+        return <ContactPage onOpenConsultation={handleOpenConsultation} />;
+      default:
+        return <HomePage onOpenConsultation={handleOpenConsultation} />;
+    }
+  };
+
   return (
     <>
       <Navbar onOpenConsultation={handleOpenConsultation} />
-      <main>
-        <Hero onOpenConsultation={handleOpenConsultation} />
-        <Problems />
-        <Lifecycle />
-        <WhyUs />
-        <Services onOpenConsultation={handleOpenConsultation} />
-        <Expertise />
-        <Clients />
-        <About />
-        <HealthCheck onOpenConsultation={handleOpenConsultation} />
-        <LeadCTA />
+      <main id="main-content">
+        {renderCurrentPage()}
       </main>
       <Footer onOpenConsultation={handleOpenConsultation} />
 
@@ -46,6 +49,14 @@ function App() {
         onClose={handleCloseConsultation}
       />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
