@@ -1,25 +1,31 @@
-marte-website/
-│
-├── public/
-│   ├── logo/
-│   └── images/
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Problems.jsx
-│   │   ├── WhyUs.jsx
-│   │   ├── Services.jsx
-│   │   ├── Expertise.jsx
-│   │   ├── About.jsx
-│   │   ├── Clients.jsx
-│   │   ├── CTA.jsx
-│   │   └── Footer.jsx
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-│
-├── package.json
-└── README.md
+MARTÉ Website Structure
+
+public/
+  logo/
+    marte-logo.svg                    Original logo source
+    marte-logo-transparent.png        Cropped transparent logo used by site
+
+src/
+  components/
+    Navbar.jsx
+    Hero.jsx
+    Problems.jsx
+    Lifecycle.jsx                     Visual CRM lifecycle section (new)
+    WhyUs.jsx
+    Services.jsx
+    Expertise.jsx
+    About.jsx
+    Clients.jsx
+    HealthCheck.jsx                   Interactive self-check (new)
+    LeadCTA.jsx                       Includes Brevo form embed
+    Footer.jsx
+  data/
+    siteContent.js
+  App.jsx
+  index.css
+  main.jsx
+
+index.html
+package.json
+vite.config.js
+README.md

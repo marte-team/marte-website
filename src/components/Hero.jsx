@@ -1,43 +1,72 @@
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, ArrowDownRight, ShieldCheck, Sparkles } from "lucide-react";
 
-const LEAD_FORM_URL = "#lead-form";
+function Hero({ onOpenConsultation }) {
+  const [email, setEmail] = useState("");
 
-function Hero() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (onOpenConsultation) {
+      onOpenConsultation(email);
+    }
+  };
+
   return (
     <section className="hero" id="top">
-      <div className="hero-grid"></div>
-
+      <div className="hero-grid" aria-hidden="true"></div>
       <div className="hero-content">
         <div className="hero-logo-wrap">
-          <img
-            src="/logo/marte-logo.svg"
-            alt="MARTÉ"
-            className="hero-logo"
-          />
+          <img src="/logo/marte-logo-transparent.png" alt="MARTÉ" className="hero-logo" />
         </div>
-
-        <div className="hero-eyebrow">
-          CRM • MARKETING AUTOMATION • GROWTH
-        </div>
-
+        <div className="hero-eyebrow">CRM STRATEGY &amp; GROWTH SERVICES</div>
         <h1>
-          Turning complex CRM systems
-          <span> into growth engines.</span>
+          Build. Manage. <span>Optimize. Scale.</span>
         </h1>
+        <p className="hero-supporting-copy">
+          We help ambitious businesses build, manage, and scale the CRM systems behind better customer journeys and sustainable revenue.
+        </p>
 
-        <div className="hero-actions">
-          <a href={LEAD_FORM_URL} className="hero-email-button">
-            Enter your email
-            <ArrowUpRight size={18} />
-          </a>
+        {/* Top-of-Funnel Email Capture CTA */}
+        <div className="hero-cta-wrapper">
+          <form className="hero-email-capture" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              className="hero-email-input"
+              placeholder="Enter your business email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className="hero-submit-btn">
+              <span>Review Your CRM Setup</span>
+              <ArrowUpRight size={17} />
+            </button>
+          </form>
+          <div className="hero-secondary-actions">
+            <a href="#problems" className="hero-explore-link">
+              <span>Discover Where Systems Break</span>
+              <ArrowDownRight size={16} />
+            </a>
+          </div>
+        </div>
 
-          <a href="#contact" className="hero-connect-button">
-            Connect with us
-            <ArrowDown size={17} />
-          </a>
+        {/* Trust Badges */}
+        <div className="hero-trust-bar">
+          <div className="trust-pill">
+            <ShieldCheck size={14} />
+            <span>EMEA &amp; LATAM Operations</span>
+          </div>
+          <div className="trust-separator">•</div>
+          <div className="trust-pill">
+            <span>Salesforce • HubSpot • Braze • Klaviyo</span>
+          </div>
+          <div className="trust-separator">•</div>
+          <div className="trust-pill">
+            <Sparkles size={14} />
+            <span>Full Lifecycle Accountability</span>
+          </div>
         </div>
       </div>
-
       <div className="hero-scroll">
         <span>Scroll to explore</span>
         <div className="scroll-line"></div>

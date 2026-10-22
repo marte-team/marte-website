@@ -2,26 +2,31 @@ export const problems = [
   {
     number: "01",
     title: "The CRM Is Underutilized",
+    summary: "Your CRM stores contacts, but its reporting, automation, and communication tools go underused.",
     text: "In many organizations, the CRM functions as little more than a contact database. Reporting and dashboard capabilities go largely unconfigured, and available communication channels, SMS, push notifications, WhatsApp, remain unused. The result is a significant gap between the platform's capability and its actual application."
   },
   {
     number: "02",
     title: "Marketing-to-Sales Handover Is Inconsistent",
-    text: "Qualified leads frequently lack a defined process for transitioning from marketing systems into the sales team's workflow. Within the CRM itself, records are often left incomplete, fields unfilled, no documentation of prior actions or context, leaving the next team member with no clear starting point."
+    summary: "Leads move between teams without the notes and context needed for a useful follow-up.",
+    text: "Qualified leads frequently lack a defined process for transitioning from marketing systems into the sales team's workflow. Within the CRM itself, records are often left incomplete, with fields unfilled and no clear notes on previous interactions, customer comments, or points where the lead dropped off. This leaves the next team member without the context needed to pick up the conversation effectively."
   },
   {
     number: "03",
     title: "Automation Failures Go Undetected",
+    summary: "Automation issues can go unnoticed until campaign performance has already suffered.",
     text: "Marketing flows can stop functioning or begin behaving inconsistently without triggering any alert. Issues are typically identified only after performance has already been affected, resulting in delayed response and lost opportunity."
   },
   {
     number: "04",
     title: "Data Integrity Is Compromised",
+    summary: "Duplicate records and inconsistent fields make reporting less reliable.",
     text: "Duplicate records, outdated contact lists, and inconsistent field mapping across systems create discrepancies between the CRM, the marketing platform, and sales reporting, undermining confidence in the data and the decisions based on it."
   },
   {
     number: "05",
     title: "Campaign Structures Do Not Scale",
+    summary: "Campaigns that work at small scale can break as audiences, regions, and volume grow.",
     text: "Campaign frameworks that perform well at a limited scale often fail to hold up as volume, regions, or audience segments expand, due to inconsistent naming conventions, undefined workflow logic, and lead assignment rules that break down under increased load."
   }
 ];
@@ -30,22 +35,26 @@ export const whyUs = [
   {
     number: "01",
     title: "One Partner, the Full Lifecycle",
-    text: "Most businesses end up working with a different vendor for implementation, another for ongoing management, and a third for everything in between, losing context and consistency at every handover. With MARTÉ, the same team that sets up your CRM is the one managing it, running your campaigns, and keeping deliverability protected along the way. Nothing gets lost in translation."
+    summary: "One accountable team carries context from implementation through ongoing management. Nothing gets lost in transition.",
+    text: "Most businesses end up working with a different vendor for implementation, another for ongoing management, and a third for everything in between, losing context and consistency at every handover. With MARTÉ, the same team that sets up your CRM is the one managing it, running your campaigns, and keeping deliverability protected along the way. Nothing gets lost in transition."
   },
   {
     number: "02",
     title: "We Use the Platform, Not Just the Inbox",
-    text: "Where most partners stop at sending campaigns, we go further, building out the reporting, dashboards, and data segregation your CRM is actually capable of. That means real visibility into what's working, not just a list of emails that went out."
+    summary: "Use reporting, dashboards, and segmentation to understand what is working, not just which communications went out.",
+    text: "Where most partners stop at sending campaigns, we go further, building out the reporting, dashboards, and data segregation your CRM is actually capable of. That means real visibility into what's working, not just a list of communications that went out."
   },
   {
     number: "03",
     title: "Campaigns Built to Scale",
+    summary: "Campaign structures and workflows designed to support more audiences, markets, and volume.",
     text: "What works for one list or one market shouldn't fall apart the moment you try to grow it. We build campaign structures, workflows, and lead assignment logic designed to hold up as your volume, regions, and audience segments expand."
   },
   {
     number: "04",
     title: "A Track Record That Speaks for Itself",
-    text: "From building CRM infrastructure from scratch for Anant Translations to managing an ongoing, multi-year partnership with Regen Labs, our work is grounded in real results for real businesses, not just capability on paper."
+    summary: "Practical experience spanning CRM infrastructure, campaign operations, and ongoing management.",
+    text: "From building CRM infrastructure from scratch for Anan Translations to managing an ongoing, multi-year partnership with Regen Labs, our work is grounded in real results for real businesses, not just capability on paper."
   }
 ];
 
@@ -54,6 +63,7 @@ export const services = [
     id: "crm-management",
     number: "01",
     title: "CRM Management Services",
+    summary: "Ongoing platform management, automation, campaigns, and communication channels.",
     intro:
       "We take full ownership of your CRM and marketing automation platform, so your team can focus on strategy instead of maintenance. Our CRM management services cover:",
     bullets: [
@@ -62,12 +72,13 @@ export const services = [
       "End-to-end management of your communication channels (email, SMS, push, and more)"
     ],
     closing:
-      "Whether you're running on HubSpot, Salesforce, Braze, Klaviyo, or another platform, we keep your systems clean, your workflows running, and your campaigns consistent."
+      "Whether you use Salesforce, HubSpot, Braze, Klaviyo, Mailchimp, or another CRM and marketing platform, we keep your systems clean, your workflows running, and your campaigns consistent."
   },
   {
     id: "crm-implementation",
     number: "02",
-    title: "CRM Implementation Services",
+    title: "CRM Implementation & Consultation Services",
+    summary: "Choose, configure, and connect a CRM that fits your team and growth goals.",
     intro:
       "Getting a new CRM or marketing automation tool up and running shouldn't slow your team down. We handle the full implementation process, from setup to configuration, so your platform is campaign-ready from day one.",
     bullets: [
@@ -83,6 +94,7 @@ export const services = [
     id: "growth-marketing",
     number: "03",
     title: "Growth & Marketing Services",
+    summary: "Build stronger retention, more meaningful engagement, and sustainable acquisition.",
     intro:
       "Beyond the platform, we help you grow the business. Our growth and marketing services are built around three core pillars:",
     pillars: [
@@ -106,6 +118,7 @@ export const services = [
     id: "email-deliverability",
     number: "04",
     title: "Email Deliverability Services",
+    summary: "Protect sending health and help important email communications reach the inbox.",
     intro:
       "An email that doesn't land in the inbox is an email that never existed. Our email deliverability services ensure your messages consistently reach your audience:",
     bullets: [
@@ -115,7 +128,7 @@ export const services = [
       "Best-practice guidance to keep your emails out of spam and in front of your customers"
     ],
     closing:
-      "MARTÉ partners with businesses across Europe, EMEA, and LATAM, with a dedicated focus on the UAE, including Dubai, to build CRM and marketing systems that are reliable, scalable, and built for growth."
+      "MARTÉ partners with businesses across EMEA and LATAM to build CRM and marketing systems that are reliable, scalable, and built for growth."
   }
 ];
 
@@ -154,26 +167,31 @@ export const expertise = [
 
 export const clients = [
   {
-    name: "Anant Translations",
+    name: "Anan Translations",
     category: "CRM Infrastructure & Marketing",
-    text: "We partnered with Anant Translations to build their CRM infrastructure from the ground up, taking full ownership of the implementation lifecycle from planning through execution. As part of this engagement, we deployed Mailchimp as their email marketing platform, managed their ongoing email marketing campaigns, and developed their complete website, giving them a unified system to run their marketing operations end to end."
+    summary: "CRM infrastructure from the ground up, Mailchimp campaign management, and website development.",
+    text: "We partnered with Anan Translations to build their CRM infrastructure from the ground up, taking full ownership of the implementation lifecycle from planning through execution. As part of this engagement, we deployed Mailchimp as their email marketing platform, managed their ongoing email marketing campaigns, and developed their complete website, giving them a unified system to run their marketing operations end to end."
   },
   {
     name: "Regen Labs",
     category: "Ongoing CRM Management",
+    summary: "An ongoing partnership supporting day-to-day CRM and marketing operations.",
     text: "Our work with Regen Labs spans multiple engagements over time, reflecting a long-standing partnership built on consistent results. We currently manage their CRM on an ongoing basis, supporting their day-to-day marketing operations and ensuring their systems continue to run reliably as their needs evolve."
   }
 ];
 
 export const about = {
-  why:
-    "As marketing automation continues to grow in importance, we noticed a gap in how it was actually being used. Most partners in this space focus on the basics, running email campaigns, sending out standard sequences, without ever tapping into what these platforms are truly capable of. CRM and marketing automation tools aren't just built for sending emails; they're built to be a complete marketing system in themselves, capable of handling data segregation, reporting, dashboards, and campaign execution all in one place. Yet most businesses end up stitching together multiple platforms and third-party integrations to do what a single, well-implemented CRM could already do on its own.",
-  whySecond:
-    "MARTÉ was built to close that gap, to help businesses use their CRM to its full potential, generate more revenue, close more leads, and manage their entire marketing operation from one place, instead of jumping between disconnected tools.",
-  what:
-    "We work across the full CRM lifecycle: implementing and configuring the right platform for your business, managing it on an ongoing basis, and building the marketing automation and communication workflows that keep your campaigns running without friction. Alongside this, we support growth and marketing initiatives, from retention and engagement to broader growth strategy, and manage email deliverability to make sure the campaigns you invest in actually reach the inbox.",
-  whatSecond:
-    "We work with businesses across Europe and the EMEA region, with a dedicated focus on the UAE, including Dubai. Our team brings together specialists across CRM platforms, marketing automation, campaign strategy, and email deliverability, giving our clients a single, accountable partner instead of a patchwork of freelancers and disconnected tools.",
-  whatThird:
-    "Whether you're setting up a CRM for the first time, trying to get more out of a system you already have, or looking for a team to manage it end to end, MARTÉ is built to be the team that makes it work."
+  title: "Why We Started MARTÉ",
+  story: [
+    "It started with a simple observation: businesses were investing in powerful CRM and marketing automation platforms, yet barely scratching the surface of what they could do.",
+    "Most businesses were using these platforms to send emails and run basic automated campaigns. But what about everything else? The customer data sitting unused, the leads that needed better nurturing, the reports that could reveal new opportunities, and the features that could help turn more prospects into customers?",
+    "Instead of making the most of the systems they already had, businesses often found themselves relying on multiple tools, third-party integrations, and disconnected workflows just to get their marketing operations running.",
+    "We saw an opportunity to change that."
+  ],
+  coreBelief: "MARTÉ was built on the belief that businesses shouldn't need more tools to get better results from the ones they already have.",
+  storyContinuation: [
+    "We wanted to help businesses unlock the full potential of their CRM by bringing data segmentation, campaign execution, reporting, dashboards, and marketing automation together in one place. Not just to make marketing easier to manage, but to help businesses nurture leads more effectively, convert more opportunities, and generate more revenue.",
+    "Because a CRM should be more than a place to store customer information, and marketing automation should be more than a way to send emails. When implemented the right way, they can become the foundation of an entire marketing operation.",
+    "That is the gap MARTÉ set out to close: helping businesses move beyond the basics, make better use of the technology they already have, and turn its untapped potential into meaningful business results."
+  ]
 };

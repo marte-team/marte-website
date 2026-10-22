@@ -1,82 +1,93 @@
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowUpRight, ChevronDown, Database, GitBranch, Workflow, BarChart3, AlertCircle } from "lucide-react";
 import { problems } from "../data/siteContent";
 
+const problemIcons = [Database, GitBranch, Workflow, BarChart3, AlertCircle];
+
 function Problems() {
+  const [activeProblem, setActiveProblem] = useState(0);
+
   return (
     <section className="section problems-section" id="problems">
       <div className="section-container">
         <div className="section-heading split-heading">
           <div>
-            <span className="eyebrow">01 / THE PROBLEM</span>
-            <h2>Where CRM Systems Typically Fall Short</h2>
+            <span className="eyebrow">01 / THE CORE CHALLENGE</span>
+            <h2>Where CRM Systems Fall Short</h2>
           </div>
-
           <p>
-            Your CRM can do far more than store contacts. The problem is often
-            not the platform itself, but how it is configured, managed, and
-            connected to the rest of your marketing operation.
+            Your CRM can do far more than store contacts. We identify the operational gaps between what your platform is capable of and how it performs in practice.
           </p>
         </div>
 
-        <div className="problems-layout">
-          <div className="problem-visual">
-            <div className="visual-window">
-              <div className="visual-window-top">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <div className="visual-dashboard">
-                <div className="dashboard-sidebar">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <div className="dashboard-main">
-                  <div className="dashboard-title"></div>
-
-                  <div className="dashboard-cards">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-
-                  <div className="dashboard-chart">
-                    <div className="chart-line"></div>
-                    <div className="chart-line second"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="visual-alert">
-                <span className="alert-dot"></span>
-                System performance requires attention
+        <div className="problems-editorial-layout">
+          {/* Subtle Real Human Photography (Adjacent) */}
+          <div className="problem-media-card">
+            <div className="problem-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80"
+                alt="Professional analyzing business performance data and CRM analytics on a laptop"
+                className="problem-editorial-image"
+                loading="lazy"
+              />
+              <div className="problem-image-overlay">
+                <span className="image-tag">OPERATIONAL AUDIT</span>
+                <h4>Auditing Lead Handovers &amp; Data Flows</h4>
+                <p>Pinpointing friction points between marketing campaigns and sales team workflows.</p>
               </div>
             </div>
-
-            <div className="visual-caption">
-              <span>CRM SYSTEM</span>
-              <span>01—05</span>
+            <div className="problem-metric-strip">
+              <div className="metric-item">
+                <span className="metric-number">67%</span>
+                <span className="metric-label">CRMs underutilize automation</span>
+              </div>
+              <div className="metric-item">
+                <span className="metric-number">40%</span>
+                <span className="metric-label">Leads lost at marketing handover</span>
+              </div>
             </div>
           </div>
 
-          <div className="problems-list">
-            {problems.map((problem) => (
-              <article className="problem-item" key={problem.number}>
-                <div className="problem-number">{problem.number}</div>
+          {/* Interactive Problem Cards */}
+          <div className="problems-interactive-list">
+            {problems.map((problem, index) => {
+              const Icon = problemIcons[index] || Workflow;
+              const isActive = activeProblem === index;
+              return (
+                <article
+                  className={`problem-card-item ${isActive ? "active" : ""}`}
+                  key={problem.number}
+                  onClick={() => setActiveProblem(isActive ? null : index)}
+                >
+                  <div className="problem-card-header">
+                    <div className="problem-index-tag">
+                      <span className="problem-num">{problem.number}</span>
+                      <Icon size={18} className="problem-icon" />
+                    </div>
+                    <div className="problem-header-text">
+                      <h3>{problem.title}</h3>
+                      <p className="problem-summary-line">{problem.summary}</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="problem-expand-btn"
+                      aria-label={isActive ? "Collapse details" : "Expand details"}
+                      aria-expanded={isActive}
+                    >
+                      <ChevronDown size={18} className={`expand-chevron ${isActive ? "rotated" : ""}`} />
+                    </button>
+                  </div>
 
-                <div className="problem-copy">
-                  <h3>{problem.title}</h3>
-                  <p>{problem.text}</p>
-                </div>
-
-                <ArrowUpRight className="problem-arrow" size={20} />
-              </article>
-            ))}
+                  {isActive && (
+                    <div className="problem-expanded-content">
+                      <div className="problem-detail-divider"></div>
+                      <span className="detail-eyebrow">WHY THIS IMPACTS GROWTH</span>
+                      <p>{problem.text}</p>
+                    </div>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

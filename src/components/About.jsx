@@ -4,35 +4,28 @@ function About() {
   return (
     <section className="section about-section" id="about">
       <div className="section-container">
-        <div className="about-intro">
-          <span className="eyebrow">05 / ABOUT US</span>
-
-          <h2>Why We Started MARTÉ</h2>
+        <div className="about-header-wrap">
+          <span className="eyebrow">07 / OUR STORY</span>
+          <h2>{about.title}</h2>
         </div>
 
-        <div className="about-content">
-          <div className="about-large-copy">
-            <p>{about.why}</p>
+        <div className="about-story-container">
+          {about.story.map((paragraph, index) => (
+            <p key={index} className="about-narrative-paragraph">
+              {paragraph}
+            </p>
+          ))}
+
+          {/* Key Editorial Highlight Quote */}
+          <div className="about-core-belief-card">
+            <p>{about.coreBelief}</p>
           </div>
 
-          <div className="about-side-copy">
-            <p>{about.whySecond}</p>
-          </div>
-        </div>
-
-        <div className="about-divider"></div>
-
-        <div className="about-what">
-          <div>
-            <span className="eyebrow">WHAT WE DO</span>
-            <h3>One team across the full CRM lifecycle.</h3>
-          </div>
-
-          <div className="about-what-copy">
-            <p>{about.what}</p>
-            <p>{about.whatSecond}</p>
-            <p>{about.whatThird}</p>
-          </div>
+          {about.storyContinuation.map((paragraph, index) => (
+            <p key={index} className="about-narrative-paragraph">
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </section>
