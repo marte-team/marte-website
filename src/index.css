@@ -206,7 +206,7 @@ img {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: var(--red);
   transition: width var(--transition);
 }
@@ -2243,12 +2243,21 @@ img {
    SUBPAGE ARCHITECTURE & ROUTING
 ========================= */
 
-.nav-link.active {
+.nav-link.active,
+.dropdown-trigger.active {
   color: var(--white);
 }
 
-.nav-link.active::after {
+.nav-link.active::after,
+.dropdown-trigger.active::after {
   width: 100%;
+}
+
+.scroll-target-anchor {
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+  display: block;
 }
 
 .dropdown-item {

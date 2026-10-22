@@ -7,6 +7,7 @@ function WhyUs() {
 
   return (
     <section className="section why-section" id="why-us">
+      <div id="crm-management" className="scroll-target-anchor" aria-hidden="true"></div>
       <div className="section-container">
         <div className="dark-heading">
           <span className="eyebrow">WHY MARTÉ</span>
