@@ -15,7 +15,7 @@ function Clients() {
       <div className="section-container">
         <div className="section-heading split-heading">
           <div>
-            <span className="eyebrow">06 / CLIENT ENGAGEMENTS</span>
+            <span className="eyebrow">06 / CLIENTS</span>
             <h2>Real Systems. Real Businesses.</h2>
           </div>
           <p>

@@ -20,7 +20,7 @@ function Services({ onOpenConsultation }) {
       <div className="section-container">
         <div className="section-heading split-heading">
           <div>
-            <span className="eyebrow">04 / CORE SOLUTIONS</span>
+            <span className="eyebrow">04 / SERVICES</span>
             <h2>Services Built Around Growth</h2>
           </div>
           <p className="section-intro">

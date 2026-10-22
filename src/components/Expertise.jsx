@@ -9,7 +9,7 @@ function Expertise() {
       <div className="section-container">
         <div className="expertise-header">
           <div>
-            <span className="eyebrow">05 / DOMAIN EXPERTISE</span>
+            <span className="eyebrow">05 / EXPERTISE</span>
             <h2>Built Around the Systems Behind Growth</h2>
           </div>
           <p>
